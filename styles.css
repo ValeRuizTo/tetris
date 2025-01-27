@@ -1,0 +1,135 @@
+/* Mobile-first styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  display: flex;
+  flex-direction: column; /* Elementos apilados verticalmente */
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #1f1c2c, #928dab); /* Fondo degradado */
+  color: #f8f9fa; /* Texto claro */
+}
+
+#container {
+  display: flex;
+  flex-direction: column; /* Elementos apilados */
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  scroll-behavior: auto;
+}
+
+#title-container {
+  font-size: 1.5em; /* Tamaño básico para móvil */
+  font-weight: normal; /* Sin estilos adicionales */
+  color: #fff; /* Texto blanco */
+  margin:-25px;
+}
+
+#score-container {
+  display: flex;
+  flex-direction: row; /* Disposición horizontal */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.7); /* Fondo oscuro translúcido */
+  border: 2px solid rgba(255, 255, 255, 0.2); /* Borde decorativo */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Sombra */
+  padding: 10px; /* Espaciado interno */
+}
+
+#score-container h3 {
+  font-size: 16px;
+  color: #4caf50;
+  margin: 0;
+}
+
+#score-container p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffeb3b;
+  margin: 0;
+}
+
+#game-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Fondo oscuro translúcido */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 6px 5px rgba(0, 0, 0, 0.6); /* Sombra suave */
+  padding: 10px; /* Espaciado interno */
+  margin: -10px;
+}
+
+#game-board {
+  width: 300px; /* Tamaño fijo del tablero */
+  height: 600px; /* Altura fija */
+  background-color: #222; /* Fondo del tablero */
+  border: 10px solid #0f0f0f; /* Borde del tablero */
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: repeat(20, 1fr); /* Divide el tablero en 20 filas */
+  grid-template-columns: repeat(10, 1fr); /* Divide el tablero en 10 columnas */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); /* Sombra para resaltar el tablero */
+}
+
+/* Styles for larger screens */
+@media (min-width: 850px) {
+  body {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  #title-container {
+    font-size: 40px; /* Tamaño grande para destacar */
+    font-weight: bold; /* Negrita para resaltar */
+    color: #ffeb3b; /* Color amarillo brillante */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para profundidad */
+    margin-right: 60px;
+    padding: 5px 10px;
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Borde decorativo */
+    border-radius: 10px; /* Bordes redondeados */
+    background: linear-gradient(135deg, #ff9800, #f44336); /* Fondo degradado cálido */
+  }
+
+  #score-container {
+    flex-direction: column; /* Cambia a disposición vertical */
+    align-items: center;
+    width: auto; /* Ajusta el ancho automáticamente */
+     margin-left: 60px;
+     padding: 20px 20px;
+
+
+  }
+  #score-container h3 {
+    font-size: 25px;
+    color: #4caf50;
+    margin: 0;
+  }
+  
+  #score-container p {
+    font-size: 25px;
+    font-weight: bold;
+    color: #ffeb3b;
+    margin: 0;
+  }
+  
+
+  #game-container {
+      margin-bottom: 10px; /* Espaciado debajo del tablero */
+      padding-left: -20px;
+  }
+}
